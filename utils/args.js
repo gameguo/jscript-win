@@ -254,7 +254,7 @@ function getOriginArgs() {
     return result;
 }
 
-console.log(getOriginArgs());
+// console.log(getOriginArgs());
 
 var args = parseArgs(getOriginArgs(), {});
-console.log(args)
+// console.log(args)
