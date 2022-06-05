@@ -56,3 +56,37 @@ fs.deleteFolder = function(path) {
     var fso = fs.fso;
     fso.DeleteFolder(path);
 }
+fs.existFile = function (file) {
+    var fso = fs.fso;
+    return fso.FileExists(file);
+}
+fs.existFolfer = function (folder) {
+    var fso = fs.fso;
+    return fso.FolderExists(folder);
+}
+fs.createFolder = function (folder) {
+    var fso = fs.fso;
+    if (!fs.existFolfer(folder)) {
+        fso.CreateFolder(folder);
+    }
+}
+fs.copyFile = function (source, destination, overwrite) {
+    var fso = fs.fso;
+    fs.createFolder(path.dirname(destination));
+    fso.CopyFile(source, destination, overwrite);
+}
+fs.copyFolder = function (source, destination, overwrite) {
+    var fso = fs.fso;
+    fs.createFolder(path.dirname(destination));
+    fso.CopyFolder(source, destination, overwrite);
+}
+fs.moveFile = function (source, destination) {
+    var fso = fs.fso;
+    fs.createFolder(path.dirname(destination));
+    fso.MoveFile(source, destination);
+}
+fs.moveFolder = function (source, destination) {
+    var fso = fs.fso;
+    fs.createFolder(path.dirname(destination));
+    fso.MoveFolder(source, destination);
+}
