@@ -1,0 +1,1 @@
+cscript %~dp0move-file.js %1 %2

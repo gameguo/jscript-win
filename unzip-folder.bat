@@ -1,0 +1,1 @@
+cscript %~dp0unzip-folder.js --input "%cd%\" --password "%1"
