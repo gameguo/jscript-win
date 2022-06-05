@@ -90,3 +90,9 @@ fs.moveFolder = function (source, destination) {
     fs.createFolder(path.dirname(destination));
     fso.MoveFolder(source, destination);
 }
+fs.writeFile = function (path, content) {
+    var fso = fs.fso;
+    var fh = fso.CreateTextFile(path, true);
+    fh.WriteLine(content);
+    fh.Close();
+}

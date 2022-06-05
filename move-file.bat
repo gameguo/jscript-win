@@ -1,0 +1,1 @@
+cscript %~dp0move-file.js --input "%cd%" --output "%1"

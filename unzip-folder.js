@@ -47,7 +47,7 @@ function main() {
             }
             continue;
         }
-        var folder = path.join([path.dirname(file), path.basenameNoExName(file)]);
+        var folder = path.join([path.dirname(file), path.basenameNoExName(file).trim()]);
         console.log("unzip file: \"" + file + "\" to folder: \"" + folder + "\"");
         var cmdStr = '"C:\\Program Files\\soft\\7-Zip\\7z.exe" x "' + file + '" -o"' + folder + '" -p"' + password + '"';
         // console.log("run cmd: " + cmd);
