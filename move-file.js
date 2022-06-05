@@ -31,7 +31,8 @@ function main() {
         var lastCount = files.length;
         files = files.filter(function (f) { return path.exname(f).toLowerCase() != "txt"; });
         var newCount = files.length;
-        var txtCount = newCount - lastCount;
+        var txtCount = lastCount - newCount;
+        allTxtCount += txtCount;
         if (files.length != 0) {
             var first = files[0];
             var fileName = path.basenameNoExName(first);
